@@ -37,7 +37,7 @@ const pagesHeaderStyle = (theme) => ({
   container: {
     ...container,
     minHeight: "50px",
-    border: "3px solid #20D1E7",
+    // border: "3px solid #20D1E7",
   },
   flex: {
     flex: 1,
