@@ -9,6 +9,7 @@ const pagesStyle = (theme) => ({
     height: "auto",
     minHeight: "100vh",
     position: "relative",
+    border: "3px solid #ED1054",
     top: "0",
   },
   fullPage: {
@@ -17,7 +18,8 @@ const pagesStyle = (theme) => ({
     minHeight: "100vh",
     display: "flex!important",
     margin: "0",
-    border: "0",
+    // border: "0",
+    border: "3px solid #73AD21",
     color: whiteColor,
     alignItems: "center",
     backgroundSize: "cover",
@@ -30,7 +32,8 @@ const pagesStyle = (theme) => ({
       position: "absolute",
       bottom: "0",
       width: "100%",
-      border: "none !important",
+      // border: "none !important",
+      border: "3px solid #20D1E7",
     },
     "&:before": {
       backgroundColor: "rgba(" + hexToRgb(blackColor) + ", 0.65)",
@@ -44,6 +47,7 @@ const pagesStyle = (theme) => ({
       top: "0",
       left: "0",
       zIndex: "2",
+      border: "3px solid #4439AC",
     },
   },
 });

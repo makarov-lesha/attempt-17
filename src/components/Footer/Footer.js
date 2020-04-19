@@ -6,6 +6,7 @@ import cx from "classnames";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Hidden from "@material-ui/core/Hidden";
 
 import GridItem from "../../components/Grid/GridItem";
 import GridContainer from "../../components/Grid/GridContainer";
@@ -49,55 +50,57 @@ export default function Footer(props) {
           justify="space-between"
           alignItems={matchesSM ? "center" : "flex-end"}
         >
-          <GridItem>
-            <List className={classes.list}>
-              <ListItem
-                className={classes.inlineBlock}
-                style={{
-                  display: matchesXS ? "block" : "inline-block",
-                  textAlign: matchesXS ? "center" : "left",
-                }}
-              >
-                <a href="/" className={block}>
-                  Home
-                </a>
-              </ListItem>
-              <ListItem
-                className={classes.inlineBlock}
-                style={{
-                  display: matchesXS ? "block" : "inline-block",
-                  textAlign: matchesXS ? "center" : "left",
-                }}
-              >
-                <a href="/" className={block}>
-                  About
-                </a>
-              </ListItem>
-              <ListItem
-                className={classes.inlineBlock}
-                style={{
-                  display: matchesXS ? "block" : "inline-block",
-                  textAlign: matchesXS ? "center" : "left",
-                }}
-              >
-                <a href="/" className={block}>
-                  Team
-                </a>
-              </ListItem>
-              <ListItem
-                className={classes.inlineBlock}
-                style={{
-                  display: matchesXS ? "block" : "inline-block",
-                  textAlign: matchesXS ? "center" : "left",
-                }}
-              >
-                <a href="/" className={block}>
-                  Contacts
-                </a>
-              </ListItem>
-            </List>
-            {/* </div> */}
-          </GridItem>
+          <Hidden xsDown>
+            <GridItem>
+              <List className={classes.list}>
+                <ListItem
+                  className={classes.inlineBlock}
+                  style={{
+                    display: matchesXS ? "block" : "inline-block",
+                    textAlign: matchesXS ? "center" : "left",
+                  }}
+                >
+                  <a href="/" className={block}>
+                    Home
+                  </a>
+                </ListItem>
+                <ListItem
+                  className={classes.inlineBlock}
+                  style={{
+                    display: matchesXS ? "block" : "inline-block",
+                    textAlign: matchesXS ? "center" : "left",
+                  }}
+                >
+                  <a href="/" className={block}>
+                    About
+                  </a>
+                </ListItem>
+                <ListItem
+                  className={classes.inlineBlock}
+                  style={{
+                    display: matchesXS ? "block" : "inline-block",
+                    textAlign: matchesXS ? "center" : "left",
+                  }}
+                >
+                  <a href="/" className={block}>
+                    Team
+                  </a>
+                </ListItem>
+                <ListItem
+                  className={classes.inlineBlock}
+                  style={{
+                    display: matchesXS ? "block" : "inline-block",
+                    textAlign: matchesXS ? "center" : "left",
+                  }}
+                >
+                  <a href="/" className={block}>
+                    Contacts
+                  </a>
+                </ListItem>
+              </List>
+              {/* </div> */}
+            </GridItem>
+          </Hidden>
           <GridItem>
             <p className={classes.right} style={{ paddingRight: 0 }}>
               &copy; {1900 + new Date().getYear()}{" "}
