@@ -13,12 +13,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import AdminNavbar from "../components/Navbars/AdminNavbar.js";
 import Footer from "../components/Footer/Footer.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
-import FixedPlugin from "../components/FixedPlugin/FixedPlugin.js";
+// import FixedPlugin from "../components/FixedPlugin/FixedPlugin.js";
 
 //images
 import logoWhite from "../assets/img/calcscout24-logo.svg";
 import logoDefault from "../assets/img/calcscout24-logo.svg";
-import sidebarImage from "../assets/img/sidebar-2.jpg";
+// import sidebarImage from "../assets/img/sidebar-2.jpg";
 
 import routes from "../routes.js";
 

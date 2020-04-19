@@ -33,7 +33,7 @@ export default function StartPage() {
             round
             variant="contained"
             color="link"
-            href="/calcs/dashboard"
+            href="/calcs/re-investments"
           >
             DASHBOARD
           </Button>

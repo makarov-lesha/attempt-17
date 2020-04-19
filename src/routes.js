@@ -46,6 +46,7 @@ var dashRoutes = [
   //   name: "Charts",
   //   icon: Timeline,
   // },
+
   {
     layout: "/auth",
     path: "/start-page",

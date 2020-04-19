@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import routes from "../routes.js";
 import AuthNavbar from "../components/Navbars/AuthNavbar.js";
 import Footer from "../components/Footer/Footer.js";
+import StartPage from "../views/Pages/StartPage.js";
 
 //Styles
 import styles from "../assets/jss/material-dashboard-pro-react/layouts/authStyle.js";
@@ -82,6 +83,7 @@ export default function Pages(props) {
         >
           <Switch>
             {getRoutes(routes)}
+            <Route path="/" component={StartPage} />
             <Redirect from="/auth" to="/auth/start-page" />
           </Switch>
           <Footer white />
