@@ -16,8 +16,7 @@ import Sidebar from "../components/Sidebar/Sidebar.js";
 // import FixedPlugin from "../components/FixedPlugin/FixedPlugin.js";
 
 //images
-import logoWhite from "../assets/img/calcscout24-logo.svg";
-import logoDefault from "../assets/img/calcscout24-logo.svg";
+import logoWhite from "../assets/img/calcscout24-logo.png";
 // import sidebarImage from "../assets/img/sidebar-2.jpg";
 
 import routes from "../routes.js";
@@ -34,10 +33,10 @@ export default function Dashboard(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [miniActive, setMiniActive] = useState(false);
   const [image, setImage] = useState("");
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("blue");
   const [bgColor, setBgColor] = useState("black");
   // const [hasImage, setHasImage] = React.useState(true);
-  const [fixedClasses, setFixedClasses] = useState("dropdown");
+  // const [fixedClasses, setFixedClasses] = useState("dropdown");
   const [logo, setLogo] = useState(logoWhite);
   // styles
   const classes = useStyles();
@@ -70,31 +69,7 @@ export default function Dashboard(props) {
       window.removeEventListener("resize", resizeFunction);
     };
   });
-  // functions for changeing the states from components
-  const handleImageClick = (image) => {
-    setImage(image);
-  };
-  const handleColorClick = (color) => {
-    setColor(color);
-  };
-  const handleBgColorClick = (bgColor) => {
-    switch (bgColor) {
-      case "white":
-        setLogo(logoDefault);
-        break;
-      default:
-        setLogo(logoWhite);
-        break;
-    }
-    setBgColor(bgColor);
-  };
-  const handleFixedClick = () => {
-    if (fixedClasses === "dropdown") {
-      setFixedClasses("dropdown show");
-    } else {
-      setFixedClasses("dropdown");
-    }
-  };
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };

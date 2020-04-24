@@ -1,7 +1,6 @@
 import {
   container,
   defaultFont,
-  whiteColor,
   grayColor,
 } from "../material-dashboard-pro-react.js";
 

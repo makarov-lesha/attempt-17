@@ -10,8 +10,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import Button from "../../components/CustomButtons/Button.js";
-// import Card from "../../components/Card/Card.js";
-// import CardBody from "../../components/Card/CardBody.js";
 
 import styles from "../../assets/jss/material-dashboard-pro-react/views/startPageStyle.js";
 
@@ -19,6 +17,7 @@ const useStyles = makeStyles(styles);
 
 export default function StartPage() {
   const classes = useStyles();
+
   return (
     <div className={classes.container}>
       <GridContainer justify="center" direction="column" alignItems="center">
@@ -32,10 +31,10 @@ export default function StartPage() {
           <Button
             round
             variant="contained"
-            color="link"
+            color="primary"
             href="/calcs/re-investments"
           >
-            DASHBOARD
+            RE CALCULATOR
           </Button>
         </GridItem>
       </GridContainer>

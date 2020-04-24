@@ -104,7 +104,7 @@ const customDropdownStyle = (theme) => ({
       backgroundColor: "transparent",
       border: "0",
       boxShadow: "none",
-      color: "black",
+      color: "blue",
     },
   },
   dropdownItem: {

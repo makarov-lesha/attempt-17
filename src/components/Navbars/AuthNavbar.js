@@ -14,7 +14,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 // @material-ui/icons
-import DashboardIcon from "@material-ui/icons/Dashboard";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import MonetizationIcon from "@material-ui/icons/MonetizationOn";

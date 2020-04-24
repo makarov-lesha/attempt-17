@@ -1,9 +1,7 @@
 import {
   container,
   defaultFont,
-  whiteColor,
   grayColor,
-  tumblrColor,
 } from "../material-dashboard-pro-react.js";
 
 const realEstateCalculatorStyle = (theme) => ({
@@ -25,6 +23,9 @@ const realEstateCalculatorStyle = (theme) => ({
     fontSize: "18px",
     color: grayColor[3],
     textAlign: "center",
+  },
+  buttonGroup1: {
+    marginTop: "10px",
   },
 });
 

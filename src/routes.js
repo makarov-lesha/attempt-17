@@ -11,17 +11,17 @@ import REInvestmentCalculator from "./views/Calculators/RealEstateInvestmentCalc
 
 // @material-ui/icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import Place from "@material-ui/icons/Place";
 import MonetizationIcon from "@material-ui/icons/MonetizationOn";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import DescriptionIcon from "@material-ui/icons/Description";
+import HomeIcon from "@material-ui/icons/Home";
 
 var dashRoutes = [
   {
     layout: "/calcs",
     path: "/dashboard",
-    component: RealEstatePage,
+    component: REInvestmentCalculator,
     name: "Main Dashboard",
     icon: DashboardIcon,
   },
@@ -49,13 +49,6 @@ var dashRoutes = [
 
   {
     layout: "/auth",
-    path: "/start-page",
-    component: StartPage,
-    name: "Calcscout 24",
-    icon: Place,
-  },
-  {
-    layout: "/auth",
     path: "/real-estate",
     component: RealEstatePage,
     name: "Real Estate",
@@ -81,6 +74,13 @@ var dashRoutes = [
     component: PricingPage,
     name: "Pricing",
     icon: MonetizationIcon,
+  },
+  {
+    layout: "/auth",
+    path: "/start-page",
+    component: StartPage,
+    name: "Start Page",
+    icon: HomeIcon,
   },
 ];
 

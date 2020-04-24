@@ -32,8 +32,8 @@ ReactDOM.render(
       <Switch>
         <Route path="/calcs" component={AdminLayout} />
         <Route path="/auth" component={AuthLayout} />
-        <Route path="/" component={AdminLayout} />
-        {/* <Redirect from="/" to="/auth/start-page" /> */}
+        <Route path="/" component={AuthLayout} />
+        <Redirect from="/" to="/auth/start-page" />
       </Switch>
     </Router>
   </React.StrictMode>,
