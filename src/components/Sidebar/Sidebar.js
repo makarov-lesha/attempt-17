@@ -517,12 +517,12 @@ class Sidebar extends React.Component {
               headerLinks={<AdminNavbarLinks rtlActive={rtlActive} />}
               links={links}
             />
-            {image !== undefined ? (
+            {/* {image !== undefined ? (
               <div
                 className={classes.background}
                 style={{ backgroundImage: "url(" + image + ")" }}
               />
-            ) : null}
+            ) : null} */}
           </Drawer>
         </Hidden>
         <Hidden smDown implementation="css">
@@ -542,12 +542,12 @@ class Sidebar extends React.Component {
               user={user}
               links={links}
             />
-            {image !== undefined ? (
+            {/* {image !== undefined ? (
               <div
                 className={classes.background}
                 style={{ backgroundImage: "url(" + image + ")" }}
               />
-            ) : null}
+            ) : null} */}
           </Drawer>
         </Hidden>
       </div>
