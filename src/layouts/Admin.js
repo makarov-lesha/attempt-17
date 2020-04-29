@@ -35,8 +35,6 @@ export default function Dashboard(props) {
   const [image, setImage] = useState("");
   const [color, setColor] = useState("blue");
   const [bgColor, setBgColor] = useState("black");
-  // const [hasImage, setHasImage] = React.useState(true);
-  // const [fixedClasses, setFixedClasses] = useState("dropdown");
   const [logo, setLogo] = useState(logoWhite);
   // styles
   const classes = useStyles();
@@ -107,6 +105,8 @@ export default function Dashboard(props) {
             key={key}
           />
         );
+      } else if (prop.layout === "/zero") {
+        return <Route path={prop.path} component={prop.component} key={key} />;
       } else {
         return null;
       }
@@ -125,7 +125,7 @@ export default function Dashboard(props) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"Calcscout24"}
+        logoText={"Calcscout 24"}
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}

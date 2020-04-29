@@ -532,6 +532,12 @@ const sidebarStyle = (theme) => ({
       color: whiteColor,
     },
   },
+  collapseWrapper: {
+    display: "block",
+  },
+  collapseContainer: {
+    overflow: "inherit",
+  },
 });
 
 export default sidebarStyle;

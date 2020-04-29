@@ -43,6 +43,8 @@ export default function Pages(props) {
             key={key}
           />
         );
+      } else if (prop.layout === "/zero") {
+        return <Route path={prop.path} component={prop.component} key={key} />;
       } else {
         return null;
       }

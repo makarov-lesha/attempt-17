@@ -16,10 +16,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 // @material-ui/icons
 import MenuIcon from "@material-ui/icons/Menu";
 
-import MonetizationIcon from "@material-ui/icons/MonetizationOn";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import DescriptionIcon from "@material-ui/icons/Description";
+import DashboardIcon from "@material-ui/icons/Dashboard";
 
 // core components
 import Button from "../CustomButtons/Button";
@@ -87,14 +87,14 @@ export default function AuthNavbar(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <NavLink
-          to={"/auth/pricing-page"}
+          to={"/calcs/dashboard"}
           className={cx(classes.navLink, {
-            [classes.navLinkActive]: activeRoute("/auth/pricing-page"),
+            [classes.navLinkActive]: activeRoute("/calcs/dashboard"),
           })}
         >
-          <MonetizationIcon className={classes.listItemIcon} />
+          <DashboardIcon className={classes.listItemIcon} />
           <ListItemText
-            primary={"Pricing"}
+            primary={"DASHBOARDS"}
             disableTypography={true}
             className={classes.listItemText}
           />

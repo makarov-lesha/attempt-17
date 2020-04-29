@@ -71,7 +71,7 @@ export default function Footer(props) {
                     textAlign: matchesXS ? "center" : "left",
                   }}
                 >
-                  <a href="/" className={block}>
+                  <a href="/auth/about" className={block}>
                     About
                   </a>
                 </ListItem>
@@ -82,7 +82,7 @@ export default function Footer(props) {
                     textAlign: matchesXS ? "center" : "left",
                   }}
                 >
-                  <a href="/" className={block}>
+                  <a href="/auth/team" className={block}>
                     Team
                   </a>
                 </ListItem>
@@ -93,7 +93,7 @@ export default function Footer(props) {
                     textAlign: matchesXS ? "center" : "left",
                   }}
                 >
-                  <a href="/" className={block}>
+                  <a href="/auth/contacts" className={block}>
                     Contacts
                   </a>
                 </ListItem>

@@ -31,7 +31,7 @@ export default function PricingPage() {
           <Button
             round
             variant="contained"
-            color="primary"
+            color="default"
             href="/calcs/dashboard"
           >
             DASHBOARD

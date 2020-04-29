@@ -27,6 +27,12 @@ const realEstateCalculatorStyle = (theme) => ({
   buttonGroup1: {
     marginTop: "10px",
   },
+  gridSystemStyle: {
+    title: {
+      color: grayColor[2],
+      textDecoration: "none",
+    },
+  },
 });
 
 export default realEstateCalculatorStyle;

@@ -107,7 +107,7 @@ class Sidebar extends React.Component {
   createLinks = (routes) => {
     const { classes, color, rtlActive } = this.props;
     return routes.map((prop, key) => {
-      if (prop.redirect) {
+      if (prop.redirect || prop.invisibleOnSidebar) {
         return null;
       }
       if (prop.collapse) {
@@ -168,7 +168,7 @@ class Sidebar extends React.Component {
             )}
           >
             <NavLink
-              to={"#"}
+              to={"/"}
               className={navLinkClasses}
               onClick={(e) => {
                 e.preventDefault();
@@ -381,8 +381,18 @@ class Sidebar extends React.Component {
                 className={itemText + " " + classes.userItemText}
               />
             </NavLink>
-            <Collapse in={this.state.openAvatar} unmountOnExit>
-              <List className={classes.list + " " + classes.collapseList}>
+            <Collapse
+              in={this.state.openAvatar}
+              unmountOnExit
+              classes={{
+                wrapper: classes.collapseWrapper,
+                container: classes.collapseContainer,
+              }}
+            >
+              <List
+                className={classes.list + " " + classes.collapseList}
+                style={{ display: "block" }}
+              >
                 <ListItem className={classes.collapseItem}>
                   <NavLink
                     to="#"
@@ -470,10 +480,10 @@ class Sidebar extends React.Component {
       });
     var brand = (
       <div className={logoClasses}>
-        <a href="/" target="_blank" className={logoMini}>
+        <a href="/" className={logoMini}>
           <img src={logo} alt="logo" className={classes.img} />
         </a>
-        <a href="/" target="_blank" className={logoNormal}>
+        <a href="/" className={logoNormal}>
           {logoText}
         </a>
       </div>

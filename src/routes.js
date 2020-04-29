@@ -1,8 +1,8 @@
 import StartPage from "./views/Pages/StartPage.js";
+import WIPPage from "./views/Pages/WIPPage.js";
 import RealEstatePage from "./views/Pages/RealEstatePage.js";
 import FinancingPage from "./views/Pages/FinancingPage.js";
 import TaxationPage from "./views/Pages/TaxationPage.js";
-import PricingPage from "./views/Pages/PricingPage.js";
 import REInvestmentCalculator from "./views/Calculators/RealEstateInvestmentCalculator.js";
 
 // import Dashboard from "./views/Dashboard/Dashboard.js";
@@ -11,41 +11,113 @@ import REInvestmentCalculator from "./views/Calculators/RealEstateInvestmentCalc
 
 // @material-ui/icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import MonetizationIcon from "@material-ui/icons/MonetizationOn";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import DescriptionIcon from "@material-ui/icons/Description";
 import HomeIcon from "@material-ui/icons/Home";
+import InfoIcon from "@material-ui/icons/Info";
+import GroupIcon from "@material-ui/icons/Group";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+import EqualizerIcon from "@material-ui/icons/Equalizer";
 
 var dashRoutes = [
   {
     layout: "/calcs",
     path: "/dashboard",
-    component: REInvestmentCalculator,
-    name: "Main Dashboard",
+    component: WIPPage,
+    name: "Dashboard",
     icon: DashboardIcon,
   },
+
   {
-    layout: "/calcs",
-    path: "/re-investments",
-    component: REInvestmentCalculator,
-    name: "Investment Calculator",
-    mini: "RE",
+    collapse: true,
+    name: "Real Estate",
+    icon: ApartmentIcon,
+    state: "stateA",
+    views: [
+      {
+        layout: "/calcs",
+        path: "/re-calc-a",
+        name: "Use case A",
+        mini: "A",
+        component: REInvestmentCalculator,
+      },
+      {
+        layout: "/calcs",
+        path: "/re-calc-b",
+        name: "Use case B",
+        mini: "B",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
+        path: "/re-calc-c",
+        name: "Use case C",
+        mini: "C",
+        component: WIPPage,
+      },
+    ],
   },
-  // {
-  //   layout: "/calcs",
-  //   path: "/wizard",
-  //   component: Wizard,
-  //   name: "Wizard",
-  //   mini: "W",
-  // },
-  // {
-  //   layout: "/calcs",
-  //   path: "/charts",
-  //   component: Charts,
-  //   name: "Charts",
-  //   icon: Timeline,
-  // },
+
+  {
+    collapse: true,
+    name: "Financing",
+    icon: BusinessCenterIcon,
+    state: "stateB",
+    views: [
+      {
+        layout: "/calcs",
+        path: "/fin-calc-a",
+        name: "Use case A",
+        mini: "A",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
+        path: "/fin-calc-b",
+        name: "Use case B",
+        mini: "B",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
+        path: "/fin-calc-c",
+        name: "Use case C",
+        mini: "C",
+        component: WIPPage,
+      },
+    ],
+  },
+
+  {
+    collapse: true,
+    name: "Tax",
+    icon: DescriptionIcon,
+    state: "stateC",
+    views: [
+      {
+        layout: "/calcs",
+        path: "/tax-calc-a",
+        name: "Use case A",
+        mini: "A",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
+        path: "/tax-calc-b",
+        name: "Use case B",
+        mini: "B",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
+        path: "/tax-calc-c",
+        name: "Use case C",
+        mini: "C",
+        component: WIPPage,
+      },
+    ],
+  },
 
   {
     layout: "/auth",
@@ -53,6 +125,7 @@ var dashRoutes = [
     component: RealEstatePage,
     name: "Real Estate",
     icon: ApartmentIcon,
+    invisibleOnSidebar: true,
   },
   {
     layout: "/auth",
@@ -60,6 +133,7 @@ var dashRoutes = [
     component: FinancingPage,
     name: "Financing",
     icon: BusinessCenterIcon,
+    invisibleOnSidebar: true,
   },
   {
     layout: "/auth",
@@ -67,20 +141,29 @@ var dashRoutes = [
     component: TaxationPage,
     name: "Taxation",
     icon: DescriptionIcon,
+    invisibleOnSidebar: true,
+  },
+
+  {
+    layout: "/auth",
+    path: "/about",
+    name: "About us",
+    icon: EqualizerIcon,
+    component: WIPPage,
   },
   {
     layout: "/auth",
-    path: "/pricing-page",
-    component: PricingPage,
-    name: "Pricing",
-    icon: MonetizationIcon,
+    path: "/team",
+    name: "Team",
+    icon: GroupIcon,
+    component: WIPPage,
   },
   {
     layout: "/auth",
-    path: "/start-page",
-    component: StartPage,
-    name: "Start Page",
-    icon: HomeIcon,
+    path: "/contacts",
+    name: "Contacts",
+    icon: ContactMailIcon,
+    component: WIPPage,
   },
 ];
 

@@ -264,14 +264,14 @@ export default function FixedPlugin(props) {
           </li>
           <li className="button-container">
             <div>
-              <Button color="warning" href="/" target="_blank" fullWidth>
+              <Button color="warning" href="/" fullWidth>
                 Buy now
               </Button>
             </div>
           </li>
           <li className="button-container">
             <div>
-              <Button color="warning" href="/" target="_blank" fullWidth>
+              <Button color="warning" href="/" fullWidth>
                 Buy now
               </Button>
             </div>
