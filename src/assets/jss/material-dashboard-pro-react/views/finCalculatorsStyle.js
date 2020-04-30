@@ -4,7 +4,7 @@ import {
   grayColor,
 } from "../material-dashboard-pro-react.js";
 
-const realEstateCalculatorStyle = (theme) => ({
+const finCalculatorsStyle = (theme) => ({
   container: {
     ...container,
     zIndex: "4",
@@ -24,9 +24,6 @@ const realEstateCalculatorStyle = (theme) => ({
     color: grayColor[3],
     textAlign: "center",
   },
-  buttonGroup1: {
-    marginTop: "10px",
-  },
   gridSystemStyle: {
     title: {
       color: grayColor[2],
@@ -35,4 +32,4 @@ const realEstateCalculatorStyle = (theme) => ({
   },
 });
 
-export default realEstateCalculatorStyle;
+export default finCalculatorsStyle;

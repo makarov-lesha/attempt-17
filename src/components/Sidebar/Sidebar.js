@@ -350,13 +350,10 @@ class Sidebar extends React.Component {
       });
     var user = (
       <div className={userWrapperClass}>
-        {/* <div className={photo}>*/}
         <Avatar className={photo} style={{ fontSize: "1em" }}>
           AM
         </Avatar>
 
-        {/* <img src={avatar} className={classes.avatarImg} alt="..." /> */}
-        {/* </div> */}
         <List className={classes.list}>
           <ListItem className={classes.item + " " + classes.userItem}>
             <NavLink

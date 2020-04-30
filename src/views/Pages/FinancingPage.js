@@ -32,10 +32,10 @@ export default function StartPage() {
           <Button
             round
             variant="contained"
-            color="primary"
-            href="/calcs/dashboard"
+            color="default"
+            href="/calcs/fin-calc-a"
           >
-            FIN CALCULATOR
+            FINANCIAL CALCULATORS
           </Button>
         </GridItem>
       </GridContainer>

@@ -31,10 +31,10 @@ export default function StartPage() {
           <Button
             round
             variant="contained"
-            color="primary"
-            href="/calcs/re-investments"
+            color="default"
+            href="/calcs/re-calc-a"
           >
-            RE CALCULATOR
+            Real Estate CALCULATORs
           </Button>
         </GridItem>
       </GridContainer>

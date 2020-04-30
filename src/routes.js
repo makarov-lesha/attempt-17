@@ -1,9 +1,16 @@
-import StartPage from "./views/Pages/StartPage.js";
 import WIPPage from "./views/Pages/WIPPage.js";
 import RealEstatePage from "./views/Pages/RealEstatePage.js";
 import FinancingPage from "./views/Pages/FinancingPage.js";
 import TaxationPage from "./views/Pages/TaxationPage.js";
-import REInvestmentCalculator from "./views/Calculators/RealEstateInvestmentCalculator.js";
+import RECalculatorA from "./views/Calculators/RECalculatorA.js";
+import RECalculatorB from "./views/Calculators/RECalculatorB.js";
+import RECalculatorC from "./views/Calculators/RECalculatorC.js";
+import FinCalculatorA from "./views/Calculators/FinCalculatorA.js";
+import FinCalculatorB from "./views/Calculators/FinCalculatorB.js";
+import FinCalculatorC from "./views/Calculators/FinCalculatorC.js";
+import TaxCalculatorA from "./views/Calculators/TaxCalculatorA.js";
+import TaxCalculatorB from "./views/Calculators/TaxCalculatorB.js";
+import TaxCalculatorC from "./views/Calculators/TaxCalculatorC.js";
 
 // import Dashboard from "./views/Dashboard/Dashboard.js";
 // import Widgets from "./views/Widgets/Widgets.js";
@@ -38,23 +45,23 @@ var dashRoutes = [
       {
         layout: "/calcs",
         path: "/re-calc-a",
-        name: "Use case A",
+        name: "Calculator A",
         mini: "A",
-        component: REInvestmentCalculator,
+        component: RECalculatorA,
       },
       {
         layout: "/calcs",
         path: "/re-calc-b",
-        name: "Use case B",
+        name: "Calculator B",
         mini: "B",
-        component: WIPPage,
+        component: RECalculatorB,
       },
       {
         layout: "/calcs",
         path: "/re-calc-c",
-        name: "Use case C",
+        name: "Calculator C",
         mini: "C",
-        component: WIPPage,
+        component: RECalculatorC,
       },
     ],
   },
@@ -68,23 +75,23 @@ var dashRoutes = [
       {
         layout: "/calcs",
         path: "/fin-calc-a",
-        name: "Use case A",
+        name: "Check your loan",
         mini: "A",
-        component: WIPPage,
+        component: FinCalculatorA,
       },
       {
         layout: "/calcs",
         path: "/fin-calc-b",
-        name: "Use case B",
+        name: "Early Repayment Penalty",
         mini: "B",
-        component: WIPPage,
+        component: FinCalculatorB,
       },
       {
         layout: "/calcs",
         path: "/fin-calc-c",
-        name: "Use case C",
+        name: "Calculator C",
         mini: "C",
-        component: WIPPage,
+        component: FinCalculatorC,
       },
     ],
   },
@@ -98,23 +105,23 @@ var dashRoutes = [
       {
         layout: "/calcs",
         path: "/tax-calc-a",
-        name: "Use case A",
+        name: "Calculator A",
         mini: "A",
-        component: WIPPage,
+        component: TaxCalculatorA,
       },
       {
         layout: "/calcs",
         path: "/tax-calc-b",
-        name: "Use case B",
+        name: "Calculator B",
         mini: "B",
-        component: WIPPage,
+        component: TaxCalculatorB,
       },
       {
         layout: "/calcs",
         path: "/tax-calc-c",
-        name: "Use case C",
+        name: "Calculator C",
         mini: "C",
-        component: WIPPage,
+        component: TaxCalculatorC,
       },
     ],
   },

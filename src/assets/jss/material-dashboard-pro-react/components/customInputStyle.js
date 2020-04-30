@@ -5,6 +5,7 @@ import {
   defaultFont,
   whiteColor,
   grayColor,
+  calcScoutColors,
 } from "../material-dashboard-pro-react.js";
 
 const customInputStyle = {
@@ -19,7 +20,7 @@ const customInputStyle = {
       borderWidth: "1px !important",
     },
     "&:after": {
-      borderColor: primaryColor[0],
+      borderColor: calcScoutColors[0],
     },
     "& + p": {
       fontWeight: "300",

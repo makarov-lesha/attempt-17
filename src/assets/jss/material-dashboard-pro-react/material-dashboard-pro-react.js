@@ -104,6 +104,8 @@ const defaultFont = {
 };
 
 const primaryColor = ["#9c27b0", "#ab47bc", "#8e24aa", "#af2cc5", "#7b1fa2"];
+const calcScoutColors = ["#1F83FF", "#1FA1FF", "#1F29FF", "#501FFF", "#005ED2"];
+
 const warningColor = [
   "#ff9800",
   "#ffa726",
@@ -428,4 +430,5 @@ export {
   cardTitle,
   cardSubtitle,
   cardLink,
+  calcScoutColors,
 };

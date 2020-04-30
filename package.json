@@ -21,6 +21,7 @@
     "react-jvectormap": "0.0.16",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-swipeable-views": "^0.13.9",
     "xlsx": "^0.15.6"
   },
   "scripts": {

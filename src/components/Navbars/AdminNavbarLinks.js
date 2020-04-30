@@ -93,7 +93,7 @@ export default function HeaderLinks(props) {
       >
         <Search className={classes.headerLinksSvg + " " + classes.searchIcon} />
       </Button>
-      <Button
+      {/* <Button
         color="transparent"
         simple
         aria-label="Dashboard"
@@ -115,8 +115,8 @@ export default function HeaderLinks(props) {
             {rtlActive ? "لوحة القيادة" : "Dashboard"}
           </span>
         </Hidden>
-      </Button>
-      <div className={managerClasses}>
+      </Button> */}
+      {/* <div className={managerClasses}>
         <Button
           color="transparent"
           justIcon
@@ -205,9 +205,9 @@ export default function HeaderLinks(props) {
             </Grow>
           )}
         </Popper>
-      </div>
+      </div> */}
 
-      <div className={managerClasses}>
+      {/* <div className={managerClasses}>
         <Button
           color="transparent"
           aria-label="Person"
@@ -281,7 +281,7 @@ export default function HeaderLinks(props) {
             </Grow>
           )}
         </Popper>
-      </div>
+      </div> */}
     </div>
   );
 }

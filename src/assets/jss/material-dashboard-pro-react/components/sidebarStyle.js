@@ -534,6 +534,8 @@ const sidebarStyle = (theme) => ({
   },
   collapseWrapper: {
     display: "block",
+    // width: "100%",
+    // float: "left",
   },
   collapseContainer: {
     overflow: "inherit",
