@@ -32,10 +32,10 @@ export default function Dashboard(props) {
   // states and functions
   const [mobileOpen, setMobileOpen] = useState(false);
   const [miniActive, setMiniActive] = useState(false);
-  const [image, setImage] = useState("");
-  const [color, setColor] = useState("blue");
-  const [bgColor, setBgColor] = useState("black");
-  const [logo, setLogo] = useState(logoWhite);
+  const image = "";
+  const color = "blue";
+  const bgColor = "black";
+  const logo = logoWhite;
   // styles
   const classes = useStyles();
   const mainPanelClasses =

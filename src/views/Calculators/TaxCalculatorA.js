@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 //SheetJS tools
 import S5SCalc from "@sheet/formula";
@@ -8,11 +8,11 @@ import XLSX from "xlsx";
 import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-import GridContainer from "../../components/Grid/GridContainer.js";
-import GridItem from "../../components/Grid/GridItem.js";
+// import GridContainer from "../../components/Grid/GridContainer.js";
+// import GridItem from "../../components/Grid/GridItem.js";
 // import Button from "../../components/CustomButtons/Button.js";
-import Card from "../../components/Card/Card.js";
-import CardBody from "../../components/Card/CardBody.js";
+// import Card from "../../components/Card/Card.js";
+// import CardBody from "../../components/Card/CardBody.js";
 import Typography from "@material-ui/core/Typography";
 
 import styles from "../../assets/jss/material-dashboard-pro-react/views/taxCalculatorsStyle.js";

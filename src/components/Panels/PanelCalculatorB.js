@@ -3,10 +3,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Info from "@material-ui/icons/Info";
-import LocationOn from "@material-ui/icons/LocationOn";
+// import Info from "@material-ui/icons/Info";
+// import LocationOn from "@material-ui/icons/LocationOn";
 import BusinessIcon from "@material-ui/icons/Business";
-import HelpOutline from "@material-ui/icons/HelpOutline";
+// import HelpOutline from "@material-ui/icons/HelpOutline";
 import Gavel from "@material-ui/icons/Gavel";
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 
@@ -35,17 +35,18 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function PanelsDescriptive() {
+export default function PanelsDescriptive(props) {
   const classes = useStyles();
   return (
     <div>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h3 className={classes.pageSubcategoriesTitle}>
+          <h4 className={classes.pageSubcategoriesTitle}>
             Choose one option to proceed
-          </h3>
+          </h4>
           <br />
           <NavPills
+            handleTabClick={props.handleTabClick}
             color="info"
             alignCenter
             tabs={[
@@ -107,28 +108,28 @@ export default function PanelsDescriptive() {
                   </Card>
                 ),
               },
-              {
-                tabButton: "Legal Info",
-                tabIcon: Gavel,
-                tabContent: (
-                  <Card>
-                    <CardHeader>
-                      <h4 className={classes.cardTitle}>
-                        Legal info on Early Repayment penalty
-                      </h4>
-                      <p className={classes.cardCategory}>German Regulation</p>
-                    </CardHeader>
-                    <CardBody>
-                      The following regulations are applicable for Legal
-                      Entites: ...
-                      <br />
-                      <br />
-                      The following regulations are applicable for Individuals:
-                      ...
-                    </CardBody>
-                  </Card>
-                ),
-              },
+              // {
+              //   tabButton: "Legal Info",
+              //   tabIcon: Gavel,
+              //   tabContent: (
+              //     <Card>
+              //       <CardHeader>
+              //         <h4 className={classes.cardTitle}>
+              //           Legal info on Early Repayment penalty
+              //         </h4>
+              //         <p className={classes.cardCategory}>German Regulation</p>
+              //       </CardHeader>
+              //       <CardBody>
+              //         The following regulations are applicable for Legal
+              //         Entites: ...
+              //         <br />
+              //         <br />
+              //         The following regulations are applicable for Individuals:
+              //         ...
+              //       </CardBody>
+              //     </Card>
+              //   ),
+              // },
             ]}
           />
         </GridItem>

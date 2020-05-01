@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 //SheetJS tools
 import S5SCalc from "@sheet/formula";
@@ -11,8 +11,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import Button from "../../components/CustomButtons/Button.js";
-import Card from "../../components/Card/Card.js";
-import CardBody from "../../components/Card/CardBody.js";
+// import Card from "../../components/Card/Card.js";
+// import CardBody from "../../components/Card/CardBody.js";
 import Heading from "../../components/Heading/Heading.js";
 import PanelsDescriptive from "../../components/Panels/PanelCalculatorB.js";
 
@@ -24,21 +24,26 @@ const useStyles = makeStyles(styles);
 
 export default function REInvestmentCalculator() {
   const classes = useStyles();
-  const [wb24, setWb24] = useState({});
-  const [calcTypeShow, setCalcTypeShow] = useState(true);
+  // const [wb24, setWb24] = useState({});
+  const [busPrivSelectorShow, setBusPrivSelectorShow] = useState(true);
+  const [calcType, setCalcType] = useState(0);
 
-  useEffect(() => {
-    fetch("/example.xlsx")
-      .then((res) => res.arrayBuffer())
-      .then((ab) => {
-        //read file
-        const wb = XLSX.read(ab, { type: "array", cellStyles: true });
-        // S5SCalc.update_value(wb, "Sheet1", "C11", 1);
-        // const html = XLSX.utils.sheet_to_html(wb.Sheets[wb.SheetNames[0]]); // first worksheet HTML
-        // elt.current.innerHTML = html;
-        setWb24(wb);
-      });
-  }, []);
+  function handleTabClick(index) {
+    setCalcType(index);
+  }
+
+  // useEffect(() => {
+  //   fetch("/example.xlsx")
+  //     .then((res) => res.arrayBuffer())
+  //     .then((ab) => {
+  //       //read file
+  //       const wb = XLSX.read(ab, { type: "array", cellStyles: true });
+  //       // S5SCalc.update_value(wb, "Sheet1", "C11", 1);
+  //       // const html = XLSX.utils.sheet_to_html(wb.Sheets[wb.SheetNames[0]]); // first worksheet HTML
+  //       // elt.current.innerHTML = html;
+  //       setWb24(wb);
+  //     });
+  // }, []);
 
   // const onScenarioChange = (scenarioNum) => {
   //   const wbTemp = { ...wb24 };
@@ -53,24 +58,27 @@ export default function REInvestmentCalculator() {
     <div>
       <Heading
         textAlign="center"
-        title="Early Repayment Penalty Calculator"
-        category="Estimate penalty in couple of clicks."
+        title="Calculator"
+        category="Estimate penalty of your bank in couple of clicks."
       />
       <GridContainer
         justify="flex-start"
         alignItems="center"
         direction="column"
       >
-        <GridItem> {calcTypeShow && <PanelsDescriptive />} </GridItem>
-        <GridItem>
+        <GridItem xs={12}>
+          {busPrivSelectorShow && (
+            <PanelsDescriptive handleTabClick={handleTabClick} />
+          )}
+        </GridItem>
+        <GridItem xs={12}>
           <Button
             color="success"
             onClick={() => {
-              setCalcTypeShow(!calcTypeShow);
-              console.log("clicked!");
+              setBusPrivSelectorShow(!busPrivSelectorShow);
             }}
           >
-            Calculate (Business)
+            {`Calculate ${calcType === 0 ? "(Business)" : "(Individual)"}`}
           </Button>
         </GridItem>
       </GridContainer>

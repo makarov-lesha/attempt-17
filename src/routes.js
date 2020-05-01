@@ -21,8 +21,6 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import DescriptionIcon from "@material-ui/icons/Description";
-import HomeIcon from "@material-ui/icons/Home";
-import InfoIcon from "@material-ui/icons/Info";
 import GroupIcon from "@material-ui/icons/Group";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
@@ -47,21 +45,21 @@ var dashRoutes = [
         path: "/re-calc-a",
         name: "Calculator A",
         mini: "A",
-        component: RECalculatorA,
+        component: WIPPage,
       },
       {
         layout: "/calcs",
         path: "/re-calc-b",
         name: "Calculator B",
         mini: "B",
-        component: RECalculatorB,
+        component: WIPPage,
       },
       {
         layout: "/calcs",
         path: "/re-calc-c",
         name: "Calculator C",
         mini: "C",
-        component: RECalculatorC,
+        component: WIPPage,
       },
     ],
   },
@@ -74,13 +72,6 @@ var dashRoutes = [
     views: [
       {
         layout: "/calcs",
-        path: "/fin-calc-a",
-        name: "Check your loan",
-        mini: "A",
-        component: FinCalculatorA,
-      },
-      {
-        layout: "/calcs",
         path: "/fin-calc-b",
         name: "Early Repayment Penalty",
         mini: "B",
@@ -88,10 +79,17 @@ var dashRoutes = [
       },
       {
         layout: "/calcs",
+        path: "/fin-calc-a",
+        name: "Check your loan",
+        mini: "A",
+        component: WIPPage,
+      },
+      {
+        layout: "/calcs",
         path: "/fin-calc-c",
         name: "Calculator C",
         mini: "C",
-        component: FinCalculatorC,
+        component: WIPPage,
       },
     ],
   },
@@ -107,21 +105,21 @@ var dashRoutes = [
         path: "/tax-calc-a",
         name: "Calculator A",
         mini: "A",
-        component: TaxCalculatorA,
+        component: WIPPage,
       },
       {
         layout: "/calcs",
         path: "/tax-calc-b",
         name: "Calculator B",
         mini: "B",
-        component: TaxCalculatorB,
+        component: WIPPage,
       },
       {
         layout: "/calcs",
         path: "/tax-calc-c",
         name: "Calculator C",
         mini: "C",
-        component: TaxCalculatorC,
+        component: WIPPage,
       },
     ],
   },

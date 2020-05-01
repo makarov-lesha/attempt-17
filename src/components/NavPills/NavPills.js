@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -19,9 +19,10 @@ import styles from "../../assets/jss/material-dashboard-pro-react/components/nav
 const useStyles = makeStyles(styles);
 
 export default function NavPills(props) {
-  const [active, setActive] = React.useState(props.active);
+  const [active, setActive] = useState(props.active);
   const handleChange = (event, active) => {
     setActive(active);
+    props.handleTabClick(active);
   };
   const handleChangeIndex = (index) => {
     setActive(index);
